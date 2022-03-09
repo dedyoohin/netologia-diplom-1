@@ -7,14 +7,14 @@ border: 1px solid gray;
 
 @font-face {
   font-family: OpenSans-Regular;
-  font-weight: 500;
+
   src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
   font-style: normal;
 }
 
 @font-face {
   font-family: OpenSans-Bold;
-  font-weight: 700;
+
   src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
   font-style: normal;
 }
@@ -47,22 +47,21 @@ h1, h2, h3, h4 {
   color: #0f0d0e;
 }
 
-.welcome {
-  min-width: 1170px;
+.hender {
+
   min-height: 450px;
   height: 450px;
-  padding-top: 28px;
   text-align: center;
   background-image: url("../images/banner-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-color: #000000;
   position: relative;
   z-index: 0;
+  padding: 28px 15px 0px 15px;
 }
 
-.welcome:after {
+.hender:after {
   content:"";
   position: absolute;
   top: 0;
@@ -73,6 +72,20 @@ h1, h2, h3, h4 {
   opacity: 0.6;
   z-index: -1;
 }
+
+.top-panel {
+  margin-left: auto;
+      margin-right: auto;
+      max-width: 1170px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+
+}
+
+
+
 
 .welcome-title {
   font-family: OpenSans-Bold;
@@ -85,18 +98,60 @@ h1, h2, h3, h4 {
   margin-right: auto;
 }
 
-.menu-container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1170px;
+.top-panel__container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 15px;
+      padding-right: 15px;
+}
+
+.menu__button {
+    width: 24px;
+    height: 20px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.menu__button-label {
+  width: 100%;
+    height: 10%;
+    margin-top: -0.1em;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.menu__button-label::before, .menu__button::after {
+  content: "";
+    width: 100%;
+    height: 10%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+}
+
+.menu__button:before {
+  top: 0;
+}
+
+.menu__button:after {
+  bottom: 0;
 }
 
 .menu-list {
   font-family: OpenSans-Regular;
+  font-weight: 500;
   margin-top: 17px;
   margin-bottom: 0px;
   list-style: none;
@@ -110,20 +165,23 @@ h1, h2, h3, h4 {
 
 }
 
+
 .logo {
-}
-
-
-.header-logo {
   width: 182px;
 }
 
 .menu {
-  margin: 0px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 
-.menu-list-item:nth-child(n+2) {
+.menu-list-item {
   margin-left: 35px;
+}
+
+.menu-even {
+  margin-left: 0px;
 }
 
 a.menu-link {
@@ -164,10 +222,18 @@ a.menu-link:hover {
 
 .trends {
   display: flex;
-  justify-content: center;
-  min-height: 320px;
 
 }
+
+
+
+.trends-card {
+  display: flex;
+  align-items: end;
+
+}
+
+
 
 .products {
   margin-left: auto;
@@ -213,7 +279,8 @@ a.menu-link:hover {
   text-decoration: line-through;
   font-size: 14px;
   margin-bottom: 5px;
-  font-weight: 700;
+
+
 }
 
 .card-product-img {
@@ -222,6 +289,9 @@ a.menu-link:hover {
 
 .product-rub {
   margin-left: 5px;
+  font-family: arial;
+  font-weight: 500;
+
 }
 
 .product-content {
@@ -229,7 +299,13 @@ a.menu-link:hover {
 }
 
 .product-price-value {
+  font-family: OpenSans-Bold;
 
+}
+
+.product-rub-old {
+  font-family: arial;
+  font-weight: 500;
 }
 
 .product_description {
@@ -242,11 +318,23 @@ a.menu-link:hover {
 
 .product-price {
   font-size: 20px;
-  font-weight: 700;
   color: #0f0d0e;
   line-height: 1;
   display: flex;
 }
+
+
+.trends-card:nth-child(1n+2) {
+margin-left: 4px;
+}
+
+.trends-card {
+  width: 25%;
+}
+
+
+
+
 
 .trend_1 {
   background-image: url("../images/trend1.jpg");
@@ -282,15 +370,6 @@ a.menu-link:hover {
 
 
 
-.trends-card {
-  width: 25%;
-  display: flex;
-  align-items: end;
-}
-
-.trends-card:nth-child(n+2) {
-  margin-left: 4px;
-}
 
 .trends-card::before {
   content: "";
@@ -390,6 +469,7 @@ a.menu-link:hover {
 
 .date-new {
   font-family: OpenSans-Regular;
+  font-weight: 500;
   font-size: 12px;
   color: #888888;
   margin-top: 0px;
@@ -432,6 +512,7 @@ a.card-new-name {
   font-size: 13px;
   color: #888888;
   font-family: OpenSans-Regular;
+  font-weight: 500;
   padding-left: 12px;
   background-color: #f4f7f6;
   border: 0px;
@@ -472,6 +553,7 @@ a.card-new-name {
   font-size: 13px;
   color: #888888;
   font-family: OpenSans-Regular;
+  font-weight: 500;
   padding-left: 12px;
   background-color: #f4f7f6;
   border: 0px;
@@ -610,7 +692,7 @@ a.text-link:hover {
 
 }
 
-.card:nth-child(n+2) {
+.card-even {
   margin-top: 35px;
 
 }
@@ -621,9 +703,15 @@ a.text-link:hover {
   align-items: flex-start;
 }
 
+.card-img-block {
+  width: auto;
+  max-width: 381px;
+}
+
+
 .card-img {
-  max-width: 380px;
-  width:50%;
+width: 100%;
+
 
 }
 
@@ -635,6 +723,8 @@ a.text-link:hover {
   margin-left: 4%;
   margin-right: 4%;
   max-width: 375px;
+  min-width: 250px;
+  width: auto;
 }
 
 a.category {
@@ -661,6 +751,7 @@ a.category:hover {
 
 p.description {
   font-family: OpenSans-Regular;
+  font-weight: 500;
   font-size: 15px;
   color: #0f0d0e;
   margin-top: 50px;
@@ -668,6 +759,7 @@ p.description {
 
 p {
   font-family: OpenSans-Regular;
+  font-weight: 500;
   font-size: 15px;
   color: #0f0d0e;
 }
@@ -675,6 +767,7 @@ p {
 
 .date {
   font-family: OpenSans-Regular;
+  font-weight: 500;
   font-size: 12px;
   color: #888888;
   margin-right: 10px;
@@ -700,7 +793,6 @@ p {
 
 .copyright {
   display: block;
-  width: 1170px;
   text-align: center;
   font-family: OpenSans-Bold;
   font-size: 12px;
