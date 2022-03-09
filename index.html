@@ -6,17 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MQ diploma</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-media.css">
 </head>
 <body>
 
-  <header class="welcome">
-    <div class="menu-container">
-      <div class="logo">
-        <img src="svg/noemi-logo.svg" class="header-logo" alt>
-      </div>
+  <header class="hender">
+    <div class="top-panel">
+
+       <div class="logo">
+         <a href="#" class="logo-link">
+           <img src="svg/noemi-logo.svg" class="header-logo" alt>
+         </a>
+       </div>
       <nav class="menu">
+
         <ul class="menu-list">
-          <li class="menu-list-item">
+          <li class="menu-list-item menu-even">
             <a class="menu-link" href="#home">Главная</a>
           </li>
           <li class="menu-list-item">
@@ -35,7 +40,12 @@
             <a class="menu-link" href="#0">контакты</a>
           </li>
         </ul>
+
       </nav>
+      <button class="menu__button js-menu__button">
+        <span class="menu__button-label">открыть меню
+        </span>
+      </button>
     </div>
     <div class="welcome-container">
       <h1 class="welcome-title">Блог о творчестве, спорте, и образе жизни</h1>
@@ -74,7 +84,9 @@
   <div class="site-content">
     <main class="main">
       <section class="card">
-        <img src="images/last-post1.jpg" class="card-img" alt="10 мест, ради которых стоит проснуться на рассвете">
+        <div class="card-img-block">
+          <img src="images/last-post1.jpg" class="card-img" alt="10 мест, ради которых стоит проснуться на рассвете">
+        </div>
         <div class="card-content">
           <a class="category" href="#">Travel</a>
           <a class="category" href="#">Health</a>
@@ -85,8 +97,10 @@
             <p class="description">Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города… Музеи еще закрыты. Что посмотреть?</p>
           </div>
         </section>
-        <section class="card">
+        <section class="card card-even">
+          <div class="card-img-block">
           <img src="images/last-post2.jpg" class="card-img" alt="ЙОга для начинающих в домашних условия">
+          </div>
           <div class="card-content">
             <a class="category" href="#">health</a>
             <a class="category" href="#">lifestyle</a>
@@ -97,8 +111,10 @@
               <p class="description">Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой из того, что можно найти в шкафу.</p>
             </div>
           </section>
-          <section class="card">
+          <section class="card card-even">
+           <div class="card-img-block">
             <img src="images/last-post3.jpg" class="card-img" alt="Лучшие музыкальные фестивали этого лета">
+           </div>
             <div class="card-content">
               <a class="category" href="#">music</a>
               <a class="card-name" href="#">
@@ -109,8 +125,10 @@
                 <p>Мы составили список лучших летних фестивалей по всему миру.</p>
               </div>
             </section>
-            <section class="card">
+            <section class="card card-even">
+             <div class="card-img-block">
               <img src="images/last-post4.jpg" class="card-img" alt="Наукоёмкий подход к кулинарии">
+             </div>
               <div class="card-content">
                 <a class="category" href="#">lifestyle</a>
                 <a class="category" href="#">food</a>
@@ -121,8 +139,10 @@
                   <p class="description">Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.</p>
                 </div>
               </section>
-              <section class="card">
+              <section class="card card-even">
+               <div class="card-img-block">
                 <img src="images/last-post5.jpg" class="card-img" alt="делаем модные принты на подушках для интерьера">
+               </div>
                 <div class="card-content">
                   <a class="category" href="#">lifestyle</a>
                   <a class="category" href="#">interion</a>
