@@ -1,7 +1,195 @@
 
+
+/* Модальное окно */
 /*
-*{
-border: 1px solid gray;
+.popup {
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 3;
+display: none;
+}
+
+.popup-active {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.popup::after {
+content: "";
+background-color: #000000;
+opacity: 0.6;
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 2;
+}
+
+.popup-close {
+background-image: url("../svg/form-x.svg");
+width: 22px;
+height: 22px;
+position: absolute;
+top: -30px;
+right: 0;
+background-repeat: no-repeat;
+padding: 0;
+border: none;
+font: inherit;
+color: inherit;
+background-color: transparent;
+cursor: pointer;
+
+}
+
+
+.popup-box {
+box-sizing: border-box;
+width: 390px;
+
+position: absolute;
+z-index: 9999;
+}
+
+.popup-box-form {
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+background-color: #ffffff;
+
+
+padding: 0px 30px 54px 30px;
+}
+
+.form {
+
+}
+
+.form-hint {
+font-size: 13px;
+display: block;
+
+}
+.form-row {
+margin-top: 33px;
+}
+
+.first-row {
+margin-top: 0px;
+}
+
+.form-group {
+display: block;
+}
+
+.field {
+width: 100%;
+height: 49px;
+font-size: 13px;
+color: #888888;
+font-family: inherit;
+font-weight: 500;
+padding: 20px;
+background-color: #f4f7f6;
+border: 0px;
+box-sizing: border-box;
+display: block;
+margin-top: 12px;
+}
+
+.select {
+-webkit-appearance: none;
+-moz-appearance: none;
+display: block;
+box-sizing: border-box;
+width: 100%;
+height: 49px;
+font-size: 13px;
+color: #888888;
+font-family: inherit;
+font-weight: 500;
+padding: 0px 20px 0px 20px;
+background-color: #f4f7f6;
+border: 0px;
+box-sizing: border-box;
+display: block;
+margin-top: 12px;
+background-image: url("../svg/form-arrows.svg");
+background-repeat: no-repeat;
+background-position: right 10px center;
+background-size: 10px;
+}
+
+.radio-group-text {
+font-size: 13px;
+font-family: OpenSans-Regular;
+}
+
+.radio-group-text::before {
+content: "";
+display: inline-block;
+width: 18px;
+height: 18px;
+
+background-image: url("../svg/form-empty-circle.svg");
+background-repeat: no-repeat;
+background-position: center center;
+background-size: 18px;
+vertical-align: middle;
+margin-right: 8px;
+
+}
+
+.radio:checked ~ .radio-group-text::before {
+background-image: url("../svg/form-circle.svg");
+}
+
+.select:focus {
+outline: 1px solid #b59f5b
+}
+
+.field:focus {
+outline: 1px solid #b59f5b
+}
+
+.textarea-popup {
+max-width: 100%;
+min-width: 100%;
+max-height: 130px;
+min-height: 130px;
+resize: none;
+}
+
+.popup-button {
+width: 100%;
+height: 49px;
+font-size: 13px;
+color: #ffffff;
+font-family: OpenSans-bold;
+background-color: #b59f5b;
+border: 0px;
+box-sizing: border-box;
+border: 1px solid #f4f7f6;
+text-transform: uppercase;
+display: block;
+}
+
+.popup-button:hover {
+background-color: #323232;
+cursor: pointer;
+
+}
+
+.radio {
+position: absolute;
+clip: rect(1px, 1px, 1px, 1px);
+width: 1px;
+height: 1px;
 }
 */
 
@@ -21,7 +209,7 @@ border: 1px solid gray;
 
 body {
   margin: 0;
-  font-family: arial, sans-serif;
+  font-family: OpenSans-Regular, arial, sans-serif;
   font-size: 18px;
 }
 
@@ -82,6 +270,7 @@ h1, h2, h3, h4 {
   justify-content: space-between;
   align-items: flex-start;
 
+
 }
 
 
@@ -120,6 +309,7 @@ h1, h2, h3, h4 {
   position: relative;
   text-indent: -9999px;
   cursor: pointer;
+  align-self: center;
 }
 
 .menu__button-label {
@@ -324,7 +514,7 @@ a.menu-link:hover {
 }
 
 
-.trends-card:nth-child(1n+2) {
+.trend_2, .trend_3, .trend_4 {
   margin-left: 4px;
 }
 
@@ -453,6 +643,7 @@ a.menu-link:hover {
   padding-right: 15px;
 }
 
+
 .top-title::after {
   content:"";
   display: block;
@@ -466,6 +657,25 @@ a.menu-link:hover {
   opacity: 0.4;
 }
 
+.top-title-popup {
+  margin-top: 40px;
+  text-align: center;
+
+
+}
+
+.top-title-popup::after {
+  content:"";
+  display: block;
+  width: 66px;
+  height: 3px;
+  background-color: #b59f5b;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 14px;
+  margin-bottom: 30px;
+  opacity: 0.4;
+}
 
 .date-new {
   font-family: OpenSans-Regular;
@@ -560,9 +770,6 @@ a.card-new-name {
   box-sizing: border-box;
   border: 1px solid #f4f7f6;
   display: block;
-
-
-
 }
 
 .email-your:focus {
@@ -701,6 +908,7 @@ a.text-link:hover {
 
   display: flex;
   align-items: flex-start;
+
 }
 
 .card-img-block {

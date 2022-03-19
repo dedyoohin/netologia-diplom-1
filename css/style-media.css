@@ -71,7 +71,7 @@
 }
 
 /* СЕЙЧАС В ТРЕНДЕ */
-@media screen (min-width: 701px), (max-width: 1390px) {
+@media screen (min-width: 640px), (max-width: 1390px) {
   .trends {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -85,16 +85,21 @@
 
   }
 
-  .trends-card:nth-child(3){
+  .trend_3 {
     margin-left: 0px;
   }
 
-  .trends-card:nth-child(1n+3){
+  .trend_3, .trend_4{
     margin-top: 4px;
   }
 }
 
-@media screen (min-width: 320px), (max-width: 700px) {
+@media screen (min-width: 320px), (max-width: 639px) {
+  .popup-box {
+    width: 333px;
+  }
+
+
   .trends {
     display: flex;
     flex-wrap: wrap;
@@ -109,7 +114,7 @@
 
   }
 
-  .trends-card:nth-child(1n+2){
+  .trend_2, .trend_3, .trend_4{
     margin: 4px 0px 0px 0px;
   }
 }
@@ -209,11 +214,11 @@
     width: 48%;
   }
 
-  .product-block:nth-child(2n+2) {
+  .product_2 {
     margin-left: 4%;
   }
 
-  .product-block:nth-child(1n+3) {
+  .product_3 {
     margin-top: 30px;
   }
 
@@ -241,7 +246,7 @@
 
   }
 
-  .product-block:nth-child(1n+2) {
+  .product_2, .product_3 {
     margin: 30px 0px 0px 0px;
   }
 }
