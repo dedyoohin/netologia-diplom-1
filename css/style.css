@@ -127,7 +127,8 @@ background-size: 10px;
 
 .radio-group-text {
 font-size: 13px;
-font-family: OpenSans-Regular;
+font-family: OpenSans;
+font-style: normal;
 }
 
 .radio-group-text::before {
@@ -170,7 +171,8 @@ width: 100%;
 height: 49px;
 font-size: 13px;
 color: #ffffff;
-font-family: OpenSans-bold;
+font-family: OpenSans;
+font-weight: 700;
 background-color: #b59f5b;
 border: 0px;
 box-sizing: border-box;
@@ -194,39 +196,46 @@ height: 1px;
 */
 
 @font-face {
-  font-family: OpenSans-Regular;
-
-  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+  font-family: "OpenSans";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff") format("woff");
   font-style: normal;
 }
 
 @font-face {
-  font-family: OpenSans-Bold;
-
-  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+  font-family: "OpenSans";
+  font-weight: 700;
+  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff") format("woff");
   font-style: normal;
+  font-display: swap;
 }
 
 body {
   margin: 0;
-  font-family: OpenSans-Regular, arial, sans-serif;
+  font-family: OpenSans, arial, sans-serif;
+  font-style: normal;
   font-size: 18px;
 }
 
 h1 {
-  font-family: OpenSans-Bold;
+  font-family: OpenSans;
+  font-weight: 700;
   text-transform: uppercase;
 
 }
 
 h2 {
-  font-family: OpenSans-Bold;
+  font-family: OpenSans;
   text-transform: uppercase;
+  font-weight: 700;
   font-size: 20px;
 }
 
 h3 {
-  font-family: OpenSans-Bold;
+  font-family: OpenSans;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 14px;
 }
@@ -277,7 +286,8 @@ h1, h2, h3, h4 {
 
 
 .welcome-title {
-  font-family: OpenSans-Bold;
+  font-family: OpenSans;
+  font-weight: 700;
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 45px;
@@ -313,8 +323,8 @@ h1, h2, h3, h4 {
 }
 
 .menu__button-label {
-  width: 100%;
-  height: 10%;
+  width: 24px;
+  height: 2px;
   margin-top: -0.1em;
   background-color: #ffffff;
   position: absolute;
@@ -325,7 +335,7 @@ h1, h2, h3, h4 {
 .menu__button::before, .menu__button::after {
   content: "";
   width: 100%;
-  height: 10%;
+  height: 2px;
   background-color: #ffffff;
   position: absolute;
   left: 0;
@@ -340,8 +350,8 @@ h1, h2, h3, h4 {
 }
 
 .menu-list {
-  font-family: OpenSans-Regular;
-  font-weight: 500;
+  font-family: OpenSans;
+  font-style: normal;
   margin-top: 17px;
   margin-bottom: 0px;
   list-style: none;
@@ -489,7 +499,8 @@ a.menu-link:hover {
 }
 
 .product-price-value {
-  font-family: OpenSans-Bold;
+  font-family: OpenSans;
+  font-weight: 700;
 
 }
 
@@ -585,7 +596,8 @@ a.menu-link:hover {
   margin-top: 5px;
   text-decoration: none;
   color: #ffffff;
-  font-family: OpenSans-Bold;
+  font-family: OpenSans;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 20px;
 }
@@ -678,8 +690,8 @@ a.menu-link:hover {
 }
 
 .date-new {
-  font-family: OpenSans-Regular;
-  font-weight: 500;
+  font-family: OpenSans;
+  font-style: normal;
   font-size: 12px;
   color: #888888;
   margin-top: 0px;
@@ -721,8 +733,8 @@ a.card-new-name {
   min-height: 49px;
   font-size: 13px;
   color: #888888;
-  font-family: OpenSans-Regular;
-  font-weight: 500;
+  font-family: OpenSans;
+  font-style: normal;
   padding-left: 12px;
   background-color: #f4f7f6;
   border: 0px;
@@ -762,8 +774,8 @@ a.card-new-name {
   height: 49px;
   font-size: 13px;
   color: #888888;
-  font-family: OpenSans-Regular;
-  font-weight: 500;
+  font-family: OpenSans;
+  font-style: normal;
   padding-left: 12px;
   background-color: #f4f7f6;
   border: 0px;
@@ -787,7 +799,8 @@ a.card-new-name {
   height: 49px;
   font-size: 13px;
   color: #ffffff;
-  font-family: OpenSans-bold;
+  font-family: OpenSans;
+  font-weight: 700;
   background-color: #b59f5b;
   border: 0px;
   box-sizing: border-box;
@@ -807,7 +820,7 @@ a.card-new-name {
   height: 49px;
   font-size: 13px;
   color: #ffffff;
-  font-family: OpenSans-bold;
+  font-family: OpenSans;
   background-color: #b59f5b;
   border: 0px;
   box-sizing: border-box;
@@ -826,7 +839,8 @@ a.card-new-name {
 
 
 a.tag-link {
-  font-family: OpenSans-Bold;
+  font-family: OpenSans;
+  font-weight: 700;
   text-decoration: none;
   font-size: 13px;
   color: #0f0d0e;
@@ -834,7 +848,8 @@ a.tag-link {
 }
 
 a.theme-link {
-  font-family: OpenSans-Bold;
+  font-family: OpenSans;
+  font-weight: 700;
   text-decoration: none;
   font-size: 14px;
   color: #0f0d0e;
@@ -855,7 +870,8 @@ a.text-link:hover {
 }
 
 .themr-quantity {
-  font-family: OpenSans-Bold;
+  font-family: OpenSans;
+  font-weight: 700;
   text-decoration: none;
   font-size: 12px;
 
@@ -928,15 +944,16 @@ a.text-link:hover {
 }
 
 .card-content {
-  margin-left: 4%;
-  margin-right: 4%;
+  margin-left: 30px;
+  margin-right: 30px;
   max-width: 375px;
   min-width: 250px;
   width: auto;
 }
 
 a.category {
-  font-family: OpenSans-Bold;
+  font-family: OpenSans;
+  font-weight: 700;
   font-size: 14px;
   color: #b59f5b;
   text-transform: uppercase;
@@ -958,31 +975,32 @@ a.category:hover {
 
 
 p.description {
-  font-family: OpenSans-Regular;
-  font-weight: 500;
+  font-family: OpenSans;
+  font-style: normal;
   font-size: 15px;
   color: #0f0d0e;
   margin-top: 50px;
 }
 
 p {
-  font-family: OpenSans-Regular;
-  font-weight: 500;
+  font-family: OpenSans;
+  font-style: normal;
   font-size: 15px;
   color: #0f0d0e;
 }
 
 
 .date {
-  font-family: OpenSans-Regular;
-  font-weight: 500;
+  font-family: OpenSans;
+  font-style: normal;
   font-size: 12px;
   color: #888888;
   margin-right: 10px;
 }
 
 .author {
-  font-family: OpenSans-Bold;
+  font-family: OpenSans;
+  font-weight: 700;
   font-size: 12px;
   color: #0f0d0e;
 
@@ -1002,7 +1020,8 @@ p {
 .copyright {
   display: block;
   text-align: center;
-  font-family: OpenSans-Bold;
+  font-family: OpenSans;
+  font-weight: 700;
   font-size: 12px;
   margin-top: 74px;
   margin-bottom: 41px;
